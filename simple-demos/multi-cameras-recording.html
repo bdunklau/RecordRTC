@@ -76,6 +76,9 @@ var timeout = 10; // 10 seconds
 
 DetectRTC.load(function() {
     captureAllCameras(function(streams) {
+	    /**
+		NOTICE that we're just rigging the multi-party look by adding the stream a second time here
+		**/
         if (streams.length == 1) {
             streams.push(streams[0]);
         }
